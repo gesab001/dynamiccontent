@@ -1,0 +1,12 @@
+PART A
+Q1: Identify the line of code where you will enter the API key
+
+src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+
+Q2) Which HTTP method is used by the browser to pass parameters to the
+Google Maps API?
+
+GET method
+
+PART B
+Q3)
