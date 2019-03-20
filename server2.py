@@ -8,7 +8,7 @@
 import pycurl
 from socket import *
 from io import BytesIO
-
+from xml.dom import minidom
 # Listening port for the server
 serverPort = 8080
 
@@ -48,8 +48,14 @@ while 1:
 
 	response_value = response_buffer.getvalue().decode('UTF-8')
 
+	parsedXML = minidom.parse(response_value)	
+	# doc.getElementsByTagName 
+	latitude = parsedXML.getElementsByTagName("lat")
+	longitude = parsedXML.getElementsByTagName("lng")
+
+
         #create HTTP response
-	response = "HTTP /1.1 200 OK\n\n" + response_value
+	response = "HTTP /1.1 200 OK\n\n" + "Auckland is located at Latitude " + latitude + " and Longitude " + longitude
 
 	#send HTTP response back to the client
 	connectionSocket.send(response.encode())

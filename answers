@@ -9,4 +9,14 @@ Google Maps API?
 GET method
 
 PART B
-Q3)
+Q3) What is the root element in the XML response received by your browser?
+
+Q4) Is there any element with an attribute?
+No.
+
+Q5) Name any two elements that are considered siblings in the XML tree
+formatted_address and geometry
+
+Your task is to modify the server2.py code so that it can parse the XML data and
+send a simpler message to the client e.g.
+Auckland is located at Latitude -36.8484597 and Longitude 174.7633315
